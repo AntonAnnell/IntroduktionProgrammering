@@ -10,7 +10,7 @@ public class SparaOrd {
     }
 
     public void läsInOrd(String svar) {
-        System.out.println("Skriv en text rad för rad. Skriv stopp om du vill se hur många tecken och rader och tecken du skrivit");
+        System.out.println("Skriv en text rad för rad. Skriv stopp om du vill se hur många tecken och rader du skrivit");
 
         boolean myBoolean = true;
         while (myBoolean) {

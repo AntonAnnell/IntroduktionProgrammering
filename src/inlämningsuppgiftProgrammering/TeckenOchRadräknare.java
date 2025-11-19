@@ -12,7 +12,6 @@ public class TeckenOchRadräknare
 
     }
 
-
     public void läggTillOrdOchRad(String ordOchRad)
         {
             antalRader++;
@@ -53,10 +52,10 @@ public class TeckenOchRadräknare
     }
 
     public boolean ärGiltigText(String text){
-        return text.matches("[a-zA-ZåäöÅÄÖ\\s]+");
+        return text.matches("[a-zA-ZåäöÅÄÖ0-9.!?:()/\\s]+");
     }
 
     public boolean stopp(String text){
-        return text.equalsIgnoreCase("stopp");
+        return text.toLowerCase().contains("stopp");
     }
 }

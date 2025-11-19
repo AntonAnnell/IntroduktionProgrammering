@@ -18,21 +18,31 @@ public class SparaOrdTest {
     void testMedSpecialtecken(){
         TeckenOchRadräknare rad2 = new TeckenOchRadräknare();
 
+        assertTrue(rad2.ärGiltigText("Hej."));
         assertTrue(rad2.ärGiltigText("Hej!"));
     }
 
     @Test
-    void testMedBlanktSvar(){
+    void testMedRadbrytning(){
         TeckenOchRadräknare rad3 = new TeckenOchRadräknare();
 
-        assertTrue(rad3.ärGiltigText(""));
+        assertTrue(rad3.ärGiltigText("\n" +
+                ""));
+    }
+
+    @Test
+    void testMedBlanktSvar(){
+        TeckenOchRadräknare rad4 = new TeckenOchRadräknare();
+
+        assertTrue(rad4.ärGiltigText(""));
     }
 
     @Test
     void testaStoppFunktion(){
-        TeckenOchRadräknare rad4 = new TeckenOchRadräknare();
+        TeckenOchRadräknare rad5 = new TeckenOchRadräknare();
 
-        assertTrue(rad4.stopp("stopp"));
-        assertTrue(rad4.stopp("Stopp"));
+        assertTrue(rad5.stopp("stopp"));
+        assertTrue(rad5.stopp("Stopp"));
+        assertTrue(rad5.stopp("Jag heter Anton stopp"));
     }
 }
